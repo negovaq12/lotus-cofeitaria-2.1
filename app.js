@@ -1,6 +1,8 @@
 const WHATSAPP="5599992283927",BUCKET="product-images";let sb=null,products=[],settings={},cart=[],cat="Todos",user=null;
 const $=id=>document.getElementById(id), money=v=>Number(v||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
-function cfg(){return{url:localStorage.LOTUS_SUPABASE_URL||"",anon:localStorage.LOTUS_SUPABASE_ANON||""}}
+const DEFAULT_SUPABASE_URL="https://otidnzewlimycojxmseq.supabase.co";
+const DEFAULT_SUPABASE_ANON="sb_publishable_QpJ4F_WQG9_7_GCZnL_2dg_HvZDT-ts";
+function cfg(){return{url:localStorage.LOTUS_SUPABASE_URL||DEFAULT_SUPABASE_URL,anon:localStorage.LOTUS_SUPABASE_ANON||DEFAULT_SUPABASE_ANON}}
 function init(){const c=cfg();if(!c.url||!c.anon)return false;sb=supabase.createClient(c.url,c.anon);return true}
 function mode(m){const a=m==="admin";$("publicView").classList.toggle("hidden",a);$("adminView").classList.toggle("hidden",!a);$("cart").classList.toggle("hidden",a);if(a)prepAdmin()}
 async function prepAdmin(){const ok=init();$("configBox").classList.toggle("hidden",ok);$("loginBox").classList.toggle("hidden",!ok);if(!ok)return;const {data}=await sb.auth.getUser();user=data?.user||null;adminState()}

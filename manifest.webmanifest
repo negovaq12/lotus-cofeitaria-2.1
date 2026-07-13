@@ -1,0 +1,9 @@
+{
+  "name": "Lótus Confeitaria",
+  "short_name": "Lótus",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#21022f",
+  "theme_color": "#4b0c70",
+  "description": "Catálogo e pedidos da Lótus Confeitaria"
+}

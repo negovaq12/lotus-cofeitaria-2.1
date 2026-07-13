@@ -1,15 +1,27 @@
-LÓTUS CONFEITARIA 2.1
+LÓTUS CONFEITARIA 3.0
 
-Antes de publicar:
-1. No Supabase, rode o arquivo supabase-setup.sql no SQL Editor.
-2. Confirme o bucket product-images como público.
-3. Crie o usuário admin em Authentication > Users.
-4. Suba esta pasta no GitHub.
-5. No Netlify, importe o repositório do GitHub.
-6. Abra o site > Admin e cole Project URL e anon public key.
+NOVAS FUNÇÕES
+- Produtos e categorias
+- Controle de estoque
+- Produtos em destaque
+- Carrinho com entrega/retirada
+- Agenda de encomendas
+- Pix
+- Pedidos salvos no Supabase
+- Painel de pedidos e status
+- Dashboard de produtos, categorias, pedidos e faturamento
+- Backup JSON
+- Aplicativo instalável (PWA)
 
-Novidades:
-- textos editáveis
-- produtos em destaque
-- dashboard
-- backup/importação JSON
+ATUALIZAÇÃO
+1. No Supabase: SQL Editor > New Query.
+2. Cole todo o conteúdo de supabase-setup.sql.
+3. Clique Run.
+4. No GitHub, substitua os arquivos antigos pelos desta pasta.
+5. Faça Commit changes.
+6. Aguarde o Netlify publicar automaticamente.
+
+IMPORTANTE
+- O bucket product-images deve continuar público.
+- As políticas de upload já criadas anteriormente continuam necessárias.
+- Teste primeiro em outro navegador antes de divulgar.
